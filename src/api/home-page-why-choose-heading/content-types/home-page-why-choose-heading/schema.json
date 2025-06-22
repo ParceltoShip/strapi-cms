@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_page_why_choose_headings",
+  "info": {
+    "singularName": "home-page-why-choose-heading",
+    "pluralName": "home-page-why-choose-headings",
+    "displayName": "HomePage-WhyChooseHeading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Main_Heading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_page_how_works_headings",
+  "info": {
+    "singularName": "home-page-how-works-heading",
+    "pluralName": "home-page-how-works-headings",
+    "displayName": "HomePage-HowWorksHeading"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Main_Heading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
+}

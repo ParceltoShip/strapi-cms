@@ -637,6 +637,101 @@ export interface ApiHomePageDeliveryHomePageDelivery
   };
 }
 
+export interface ApiHomePageHowWorkHomePageHowWork
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'home_page_how_works';
+  info: {
+    displayName: 'HomePage-HowWork';
+    pluralName: 'home-page-how-works';
+    singularName: 'home-page-how-work';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-page-how-work.home-page-how-work'
+    >;
+    Main_Heading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Main_Text: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHomePageHowWorksHeadingHomePageHowWorksHeading
+  extends Struct.SingleTypeSchema {
+  collectionName: 'home_page_how_works_headings';
+  info: {
+    displayName: 'HomePage-HowWorksHeading';
+    pluralName: 'home-page-how-works-headings';
+    singularName: 'home-page-how-works-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-page-how-works-heading.home-page-how-works-heading'
+    >;
+    Main_Heading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomePageMainHeadingHomePageMainHeading
   extends Struct.SingleTypeSchema {
   collectionName: 'home_page_main_headings';
@@ -830,6 +925,44 @@ export interface ApiHomePageSmallDeliveryHomePageSmallDelivery
   };
 }
 
+export interface ApiHomePageWhyChooseHeadingHomePageWhyChooseHeading
+  extends Struct.SingleTypeSchema {
+  collectionName: 'home_page_why_choose_headings';
+  info: {
+    displayName: 'HomePage-WhyChooseHeading';
+    pluralName: 'home-page-why-choose-headings';
+    singularName: 'home-page-why-choose-heading';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-page-why-choose-heading.home-page-why-choose-heading'
+    >;
+    Main_Heading: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomePageWhyChooseHomePageWhyChoose
   extends Struct.CollectionTypeSchema {
   collectionName: 'home_page_why_chooses';
@@ -850,12 +983,26 @@ export interface ApiHomePageWhyChooseHomePageWhyChoose
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::home-page-why-choose.home-page-why-choose'
     >;
     Main_Heading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Main_Text: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1414,10 +1561,13 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::home-page-compare.home-page-compare': ApiHomePageCompareHomePageCompare;
       'api::home-page-delivery.home-page-delivery': ApiHomePageDeliveryHomePageDelivery;
+      'api::home-page-how-work.home-page-how-work': ApiHomePageHowWorkHomePageHowWork;
+      'api::home-page-how-works-heading.home-page-how-works-heading': ApiHomePageHowWorksHeadingHomePageHowWorksHeading;
       'api::home-page-main-heading.home-page-main-heading': ApiHomePageMainHeadingHomePageMainHeading;
       'api::home-page-mobile.home-page-mobile': ApiHomePageMobileHomePageMobile;
       'api::home-page-notification.home-page-notification': ApiHomePageNotificationHomePageNotification;
       'api::home-page-small-delivery.home-page-small-delivery': ApiHomePageSmallDeliveryHomePageSmallDelivery;
+      'api::home-page-why-choose-heading.home-page-why-choose-heading': ApiHomePageWhyChooseHeadingHomePageWhyChooseHeading;
       'api::home-page-why-choose.home-page-why-choose': ApiHomePageWhyChooseHomePageWhyChoose;
       'api::shipping-rate.shipping-rate': ApiShippingRateShippingRate;
       'plugin::content-releases.release': PluginContentReleasesRelease;

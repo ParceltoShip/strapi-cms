@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_page_why_chooses",
+  "collectionName": "home_page_how_works",
   "info": {
-    "singularName": "home-page-why-choose",
-    "pluralName": "home-page-why-chooses",
-    "displayName": "HomePage-WhyChoose"
+    "singularName": "home-page-how-work",
+    "pluralName": "home-page-how-works",
+    "displayName": "HomePage-HowWork"
   },
   "options": {
     "draftAndPublish": true
@@ -31,7 +31,7 @@
           "localized": true
         }
       },
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "allowedTypes": [
         "images",
