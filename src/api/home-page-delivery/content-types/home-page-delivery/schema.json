@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_page_deliveries",
+  "info": {
+    "singularName": "home-page-delivery",
+    "pluralName": "home-page-deliveries",
+    "displayName": "HomePage-DeliveryServices"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Main_Heading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Main_Text": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Main_Text_Bold": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
+}

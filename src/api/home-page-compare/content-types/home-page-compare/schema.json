@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_page_compares",
+  "info": {
+    "singularName": "home-page-compare",
+    "pluralName": "home-page-compares",
+    "displayName": "HomePage-Compare"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Main_Heading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Main_Text": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
+}

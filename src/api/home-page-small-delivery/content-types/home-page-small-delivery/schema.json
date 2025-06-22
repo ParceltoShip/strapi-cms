@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_page_small_deliveries",
+  "info": {
+    "singularName": "home-page-small-delivery",
+    "pluralName": "home-page-small-deliveries",
+    "displayName": "HomePage-SmallDelivery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Main_Heading": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Main_Text": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
+}
